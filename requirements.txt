@@ -1,0 +1,6 @@
+Django==5.2.6
+python-multipart
+PyPDF2==3.0.1
+pikepdf
+pdf2image
+Pillow

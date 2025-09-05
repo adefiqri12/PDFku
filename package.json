@@ -1,0 +1,24 @@
+{
+  "name": "pdfku",
+  "version": "0.1.0",
+  "description": "PDFku system website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i src/static/css/tailwind-input.css -o src/static/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adefiqri12/PDFku.git"
+  },
+  "author": "Ade Fiqri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adefiqri12/PDFku/issues"
+  },
+  "homepage": "https://github.com/adefiqri12/PDFku#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}

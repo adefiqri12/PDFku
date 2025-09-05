@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots"/>
+    <title>{% block head_title %}{% endblock %}</title>
+    <meta name="description" content="PDFku"/>
+    <meta property="og:title" content="Home - PDFku"/>
+    <meta property="og:description" content="PDFku - Your one-stop solution for all PDF needs"/>
+    <link rel="icon" href="{% static 'images/logo.png' %}" alt="Logo"/>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
