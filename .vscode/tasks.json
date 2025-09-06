@@ -2,11 +2,33 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "django:run",
+            "type": "shell",
+            "command": "source venv/bin/activate && python src/manage.py runserver",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
             "label": "tailwind:watch",
             "type": "shell",
             "command": "npm run dev",
             "isBackground": true,
             "problemMatcher": []
+        },
+        {
+            "label": "open:browser",
+            "type": "shell",
+            "command": "xdg-open http://127.0.0.1:8000/",
+            "problemMatcher": []
+        },
+        {
+            "label": "runserver",
+            "dependsOn": [
+                "django:run",
+                "tailwind:watch",
+                "open:browser"
+            ],
+            "dependsOrder": "sequence"
         }
     ]
 }
