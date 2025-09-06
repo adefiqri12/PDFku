@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i src/static/css/tailwind-input.css -o src/static/css/output.css --watch",
+    "build": "tailwindcss -i src/static/css/tailwind-input.css -o src/static/css/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
