@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myproject',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR.parent / 'db.sqlite3',
     }
 }
 
@@ -122,6 +123,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = BASE_DIR.parent / 'local-cdn' / 'static'
+# STATIC_ROOT = BASE_DIR / "staticfiles"    # for collectstatic in production
 
 # Media files (user-uploaded content)
 # https://docs.djangoproject.com/en/5.0/topics/files/
