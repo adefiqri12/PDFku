@@ -2,25 +2,102 @@
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots"/>
-    <title>{% block head_title %}{% endblock %}</title>
-    <meta name="description" content="PDFku"/>
-    <meta property="og:title" content="Home - PDFku"/>
-    <meta property="og:description" content="PDFku - Your one-stop solution for all PDF needs"/>
-    <link rel="icon" href="{% static 'images/logo.png' %}" alt="Logo"/>
-    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
-    <script src="//unpkg.com/alpinejs" defer></script>
-</head>
+    <meta name="robots" />
+    <title>
+      {% block head_title %}
 
-<body>
-<header>
-    <nav>
-    </nav>
-</header>
-    <main>{% block content %}{% endblock %}</main>
-</body>
+      {% endblock %}
+    </title>
+    <meta name="description" content="PDFku" />
+    <meta property="og:title" content="Home - PDFku" />
+    <meta property="og:description" content="PDFku - Your one-stop solution for all PDF needs" />
+    <link rel="icon" href="{% static 'images/tr_icon.png' %}" alt="Logo" />
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body class="text-neutral-50 bg-neutral-900/88 min-h-screen flex flex-col">
+    <header class="w-full flex justify-center my-4">
+      <nav class="w-full mx-4 px-6 py-3 flex items-center justify-between bg-neutral-800 border border-neutral-700 rounded-2xl shadow-lg shadow-neutral-900/30 backdrop-blur-md">
+        <div class="flex items-center gap-2">
+          <img src="{% static 'images/tr_black_cut.png' %}" alt="PDFku Logo" class="pb-0.5 h-6 md:h-7 md:pb-1 w-auto" />
+          <!-- Inline nav for desktop, hidden on mobile -->
+          <ul class="hidden md:flex flex-row items-center gap-6 ml-4">
+            <li>
+              <a href="/" class="px-2 py-1 hover:text-primary transition">Convert</a>
+            </li>
+            <li>
+              <a href="/" class="px-2 py-1 hover:text-primary transition">Merge</a>
+            </li>
+            <li>
+              <a href="/" class="px-2 py-1 hover:text-primary transition">Split</a>
+            </li>
+            <li>
+              <a href="/" class="px-2 py-1 hover:text-primary transition">Compress</a>
+            </li>
+          </ul>
+          <!-- Hamburger for mobile, right beside logo -->
+          <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-10 h-8 ml-2 focus:outline-none" aria-label="Toggle navigation">
+            <span class="block w-6 h-0.5 bg-gray-200 mb-1 transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-200 mb-1 transition-all"></span>
+            <span class="block w-6 h-0.5 bg-gray-200 transition-all"></span>
+          </button>
+        </div>
+        <!-- Right side nav (GitHub) always on right -->
+        <ul id="navbar-menu" class="hidden absolute top-16 left-0 w-full bg-neutral-900 md:static md:flex-row md:items-center md:gap-6 md:w-auto md:bg-transparent z-50 transition-all md:hidden">
+          <li>
+            <a href="/" class="block px-4 py-2 hover:text-primary transition">Convert</a>
+          </li>
+          <li>
+            <a href="/" class="block px-4 py-2 hover:text-primary transition">Merge</a>
+          </li>
+          <li>
+            <a href="/" class="block px-4 py-2 hover:text-primary transition">Split</a>
+          </li>
+          <li>
+            <a href="/tools/" class="block px-4 py-2 hover:text-primary transition">Compress</a>
+          </li>
+        </ul>
+        <!-- GitHub link always on right, both mobile and desktop -->
+        <a href="https://github.com/adefiqri12/PDFku" target="_blank" class="flex items-center gap-1 pl-4 py-2 hover:text-primary transition ml-2 md:ml-0"><i class="devicon-github-original"></i> GitHub</a>
+      </nav>
+      <script>
+        // Navbar hamburger toggle
+        const toggleBtn = document.getElementById('hamburger')
+        const menu = document.getElementById('navbar-menu')
+        toggleBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden')
+        })
+        // Hide menu on link click (mobile)
+        menu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth < 768) menu.classList.add('hidden')
+          })
+        })
+        // Hide menu on resize to desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) menu.classList.remove('hidden')
+          else menu.classList.add('hidden')
+        })
+      </script>
+    </header>
+    <main class="flex-1">
+      {% block content %}
+
+      {% endblock %}
+    </main>
+    <footer class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 py-4 mt-8 bg-neutral-800 text-gray-300 text-sm border-t border-neutral-700">
+      <div class="flex items-center gap-1 mt-2 md:mt-0">
+        <span>© 2025 PDFku — Free, open-source, and secure PDF tools.</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/adefiqri12/PDFku" target="_blank" class="flex items-center gap-1 pl-4 py-2 hover:text-primary transition ml-2 md:ml-0"><i class="devicon-github-original"></i>Github</a>
+      </div>
+    </footer>
+  </body>
+</html>
