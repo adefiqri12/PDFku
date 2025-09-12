@@ -1,33 +1,57 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block head_title %}
   Home - PDFku
 {% endblock %}
 {% block content %}
-  <section class="max-w-5xl mx-auto px-4 py-10">
+  <section class="max-w-[80%] mx-auto px-8 py-10">
     <div class="mb-10 text-center">
       <h1 class="text-3xl sm:text-4xl font-bold mb-2 py-4">Free online PDF tools</h1>
       <p class="text-base py-4 sm:text-lg text-neutral-300 font-medium">Every tool you need to process PDF files: edit, convert, merge, compress, sign and more.</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-6 mt-18">
       <!-- Merge PDF -->
-      <a href="#" class="group flex flex-col items-center justify-center bg-neutral-800 border border-neutral-700 rounded-2xl p-6 hover:bg-neutral-700 transition shadow-lg">
-        <span class="text-4xl mb-3 text-primary group-hover:scale-110 transition-transform"><i class="devicon-google-plain"></i></span>
-        <span class="font-semibold text-lg mb-1">Merge PDF</span>
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/60">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/merge.png' %}" alt="Merge PDF" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">Merge PDF</span>
+        </div>
       </a>
       <!-- Split PDF -->
-      <a href="#" class="group flex flex-col items-center justify-center bg-neutral-800 border border-neutral-700 rounded-2xl p-6 hover:bg-neutral-700 transition shadow-lg">
-        <span class="text-4xl mb-3 text-primary group-hover:scale-110 transition-transform"><i class="devicon-google-plain"></i></span>
-        <span class="font-semibold text-lg mb-1">Split PDF</span>
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/60">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/split.png' %}" alt="Split PDF" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">Split PDF</span>
+        </div>
       </a>
       <!-- Compress PDF -->
-      <a href="#" class="group flex flex-col items-center justify-center bg-neutral-800 border border-neutral-700 rounded-2xl p-6 hover:bg-neutral-700 transition shadow-lg">
-        <span class="text-4xl mb-3 text-primary group-hover:scale-110 transition-transform"><i class="devicon-google-plain"></i></span>
-        <span class="font-semibold text-lg mb-1">Compress PDF</span>
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/60">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/compress.png' %}" alt="Compress PDF" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">Compress PDF</span>
+        </div>
+      </a>
+      <!-- PDF Uncopyable -->
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/50">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/uncopy.png' %}" alt="PDF Uncopyable" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">PDF Uncopyable</span>
+        </div>
       </a>
       <!-- Convert PDF to Word -->
-      <a href="#" class="group flex flex-col items-center justify-center bg-neutral-800 border border-neutral-700 rounded-2xl p-6 hover:bg-neutral-700 transition shadow-lg">
-        <span class="text-4xl mb-3 text-primary group-hover:scale-110 transition-transform"><i class="devicon-google-plain"></i></span>
-        <span class="font-semibold text-lg mb-1">PDF to Word</span>
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/60">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/to_word.png' %}" alt="Convert PDF to Word" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">PDF to Word</span>
+        </div>
+      </a>
+      <!-- Convert Word to PDF -->
+      <a href="#" class="group aspect-[5/3] lg:min-h-35 md:min-h-28 flex flex-col items-center justify-center bg-neutral-900 rounded-2xl px-6 py-8 hover:bg-neutral-700 transition shadow-lg shadow-neutral-900/60">
+        <div class="flex flex-col items-center justify-center w-full h-full">
+          <img src="{% static 'images/icons/word.png' %}" alt="Convert Word to PDF" class="w-14 h-14 mb-3 text-primary group-hover:scale-110 transition-transform mx-auto" />
+          <span class="font-semibold text-lg mb-1 text-center">PDF to Word</span>
+        </div>
       </a>
     </div>
   </section>
