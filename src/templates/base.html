@@ -15,30 +15,30 @@
     <meta name="description" content="PDFku" />
     <meta property="og:title" content="Home - PDFku" />
     <meta property="og:description" content="PDFku - Your one-stop solution for all PDF needs" />
-    <link rel="icon" href="{% static 'images/tr_icon.png' %}" alt="Logo" />
+    <link rel="icon" href="{% static 'images/logo/tr_icon.png' %}" alt="Logo" />
     <link rel="stylesheet" href="{% static 'css/output.css' %}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
 
-  <body class="text-neutral-50 bg-neutral-900/88 min-h-screen flex flex-col">
+  <body class="text-neutral-50 bg-neutral-950/89 min-h-screen flex flex-col">
     <header class="w-full flex justify-center my-4">
-      <nav class="w-full mx-4 px-6 py-3 flex items-center justify-between bg-neutral-800 border border-neutral-700 rounded-2xl shadow-lg shadow-neutral-900/30 backdrop-blur-md">
+      <nav class="w-full mx-8 px-6 py-3 flex items-center justify-between bg-neutral-900 border border-neutral-700 rounded-2xl shadow-lg shadow-neutral-900/30 backdrop-blur-md">
         <div class="flex items-center gap-2">
-          <img src="{% static 'images/tr_black_cut.png' %}" alt="PDFku Logo" class="pb-0.5 h-6 md:h-7 md:pb-1 w-auto" />
+          <img src="{% static 'images/logo/tr_black_cut.png' %}" alt="PDFku Logo" class="pb-0.5 h-6 md:h-7 md:pb-1 w-auto" />
           <!-- Inline nav for desktop, hidden on mobile -->
           <ul class="hidden md:flex flex-row items-center gap-6 ml-4">
-            <li>
-              <a href="/" class="px-2 py-1 hover:text-primary transition">Convert</a>
+            <li class="group flex items-center">
+              <a href="/" class="relative px-2 py-1 flex items-center hover:text-primary transition after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100 after:origin-left">Convert</a>
             </li>
-            <li>
-              <a href="/" class="px-2 py-1 hover:text-primary transition">Merge</a>
+            <li class="group flex items-center">
+              <a href="/" class="relative px-2 py-1 flex items-center hover:text-primary transition after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100 after:origin-left">Merge</a>
             </li>
-            <li>
-              <a href="/" class="px-2 py-1 hover:text-primary transition">Split</a>
+            <li class="group flex items-center">
+              <a href="/" class="relative px-2 py-1 flex items-center hover:text-primary transition after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100 after:origin-left">Split</a>
             </li>
-            <li>
-              <a href="/" class="px-2 py-1 hover:text-primary transition">Compress</a>
+            <li class="group flex items-center">
+              <a href="/tools/" class="relative px-2 py-1 flex items-center hover:text-primary transition after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-0.5 after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100 after:origin-left">Compress</a>
             </li>
           </ul>
           <!-- Hamburger for mobile, right beside logo -->
@@ -91,7 +91,7 @@
 
       {% endblock %}
     </main>
-    <footer class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 py-4 mt-8 bg-neutral-800 text-gray-300 text-sm border-t border-neutral-700">
+    <footer class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 py-4 mt-8 bg-neutral-900 text-gray-300 text-sm border-t border-neutral-700">
       <div class="flex items-center gap-1 mt-2 md:mt-0">
         <span>© 2025 PDFku — Free, open-source, and secure PDF tools.</span>
       </div>
